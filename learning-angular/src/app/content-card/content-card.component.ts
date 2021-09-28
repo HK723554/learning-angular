@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
-import { ContentList } from '../helper-files/content-list';
 @Component({
   selector: 'app-content-card',
   templateUrl: './content-card.component.html',
   styleUrls: ['./content-card.component.css']
 })
 export class ContentCardComponent implements OnInit {
-  public bookList: ContentList = new ContentList;
   constructor() { 
 
     let newContent: Content;
@@ -22,7 +20,7 @@ export class ContentCardComponent implements OnInit {
       tags: ['deep','got me in my feels ']
     }
 
-    this.bookList.addBooks(newContent);
+    // this.addBooks(newContent);
 
     newContent = {
       id: 1,
@@ -34,7 +32,7 @@ export class ContentCardComponent implements OnInit {
       tags: ['sociology','albania']
     }
 
-    this.bookList.addBooks(newContent);
+    // this.bookList.addBooks(newContent);
 
     newContent = {
       id: 2,
@@ -46,7 +44,8 @@ export class ContentCardComponent implements OnInit {
       tags: ['world','stuff']
     }
 
-    this.bookList.addBooks(newContent);
+    // this.bookList.addBooks(newContent);
+    
   }
 
   ngOnInit(): void {

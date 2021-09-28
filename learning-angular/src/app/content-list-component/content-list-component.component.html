@@ -1,0 +1,6 @@
+<app-content-card *ngFor="let item of _booksList; index as i; first as isFirst" 
+                  [content]="item"
+                  [class.is-first]="isFirst" 
+                  class="content-{{i}}">
+                
+</app-content-card>

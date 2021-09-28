@@ -1,10 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Content } from './helper-files/content-interface';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'learning-angular';
+export class AppComponent implements OnInit {
+  public title = 'learning-angular';
+
+  _booksList: Content[];
+
+  public constructor(){
+    
+  }
+
+  ngOnInit(): void {
+
+  }
+  
 }
