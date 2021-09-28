@@ -10,11 +10,9 @@ export class AppComponent implements OnInit {
   public title = 'learning-angular';
 
   constructor(){
-    
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
+  
   
 }
