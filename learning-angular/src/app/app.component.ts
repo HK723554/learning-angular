@@ -3,15 +3,13 @@ import { Content } from './helper-files/content-interface';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: '/content-list-component/content-list-component.component.html',
+  styleUrls: ['../src/styles.css','./app.component.css']
 })
 export class AppComponent implements OnInit {
   public title = 'learning-angular';
 
-  _booksList: Content[];
-
-  public constructor(){
+  constructor(){
     
   }
 
