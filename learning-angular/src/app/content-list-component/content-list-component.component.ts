@@ -27,28 +27,27 @@ export class ContentListComponentComponent implements OnInit {
 
     {
       id: 2,
-      title: "Thus spoke Zarathustra",
-      author: "Freidrich Nietzsche",
-      body: "a book about a man named zarathustra and his phiolosophically important adventures"
+      title: "Eyewitness: Earth",
+      author: "DK",
+      body: "a book about the earth for kids"
     },
 
     {
       id: 3,
-      title: "Thus spoke Zarathustra",
-      author: "Freidrich Nietzsche",
-      body: "a book about a man named zarathustra and his phiolosophically important adventures"
+      title: "yes",
+      author: "yes",
+      body: "a book "
     },
 
     {
       id: 4,
-      title: "Thus spoke Zarathustra",
-      author: "Freidrich Nietzsche",
-      body: "a book about a man named zarathustra and his phiolosophically important adventures"
+      title: "q",
+      author: "a",
+      body: "a book lol"
     }]
     
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
 

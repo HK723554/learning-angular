@@ -1,12 +1,12 @@
 <div class="content">
     <div class="content-1">
         <div class="line"></div>
-            <span class="content-author">{{newContent.author}}</span>
-            <span class="content-title">{{newContent.title}}</span>
-            <span class="content-type">{{newContent.type}}</span>
+            <span class="content-title">{{item.title}}</span>
+            <span class="content-author">{{item.author}}</span>
+            <span class="content-type">{{item.type}}</span>
         <div class="line"></div>
-            <span class="content-body">{{newContent.body}}</span>
+            <span class="content-body">{{item.body}}</span>
         <div class="line"></div>
-            <span class="content-tags">{{newContent.tags}}</span>
+            <span class="content-tags" *ngFor="let tag of item.tags">{{tag}}</span>
     </div>
 </div>
