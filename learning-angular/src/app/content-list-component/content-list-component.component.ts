@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-content-list-component',
   templateUrl: './content-list-component.component.html',
-  styleUrls: ['./content-list-component.component.css']
+  styleUrls: ['./content-list-component.component.scss']
 })
 export class ContentListComponentComponent implements OnInit {
 

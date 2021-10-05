@@ -4,7 +4,7 @@ import { Content } from './helper-files/content-interface';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
   public title = 'learning-angular';
