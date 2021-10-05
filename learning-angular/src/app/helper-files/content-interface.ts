@@ -1,4 +1,5 @@
-export interface Content{ 
+export interface Content{
+    showOnList: boolean; 
     id: number;
     author: string;
     imgUrl?: string;

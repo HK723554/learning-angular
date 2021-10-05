@@ -1,7 +1,7 @@
 <div class="content">
     <div class="content-1">
         <div class="line"></div>
-            <span class="content-title">{{item.title}}</span>
+            <span class="content-title" *ngIf="item.showOnList === 'true'">{{item.title}}</span>
             <span class="content-author">{{item.author}}</span>
             <span class="content-type">{{item.type}}</span>
         <div class="line"></div>

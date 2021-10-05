@@ -1,1 +1,12 @@
+<h3>Search for any books here:</h3>
+<input type="text" [(ngModel)]="check">
+  <button (click)="findBooks()">
+    Search
+  </button>
+
+<div class="result">
+  {{ check.value }}
+</div>
+
+
 <app-content-list-component></app-content-list-component>
