@@ -1,5 +1,4 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { title } from 'process';
 import { Content } from './helper-files/content-interface';
 
 @Pipe({
@@ -7,8 +6,8 @@ import { Content } from './helper-files/content-interface';
 })
 export class SortBookTitlePipe implements PipeTransform {
 
-  transform(_booksList: Content[], ...args: Content[]) {
-    return _booksList.filter(_booksList => _booksList.showOnList == true);
+  transform(_booksList: Content[], type: Content[]) {
+    return _booksList.filter(book => _booksList.showOnList?.includes(type));
   }
 
 }
