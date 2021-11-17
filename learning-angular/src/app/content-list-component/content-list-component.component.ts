@@ -72,6 +72,9 @@ export class ContentListComponentComponent implements OnInit {
     this.musicList = [...this.musicList];
     }
 
+  pushContent($event: any) {
+
+  }
 }
 
 
