@@ -1,9 +1,15 @@
 <app-create-content></app-create-content>
 
-<form onsubmit="return false;">
-  <input class="check-title-input" #checkTitle>
-  <button class="check-title-button"type="submit" (click)="findTitle(checkTitle.value)">Does it exist?</button>
-</form>
+
+<mat-form-field>
+  <mat-label>Check for the title <input matInput placeholder="hi put text here" #checkTitle></mat-label>
+
+
+</mat-form-field>
+
+<button mat-raised-button color="primary"
+        (click)="findTitle(checkTitle.value)">Does it exist?</button>
+
 <div class="title-check">
   {{ message }}
 </div>

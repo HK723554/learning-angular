@@ -1,27 +1,31 @@
-<div class ="check-input">
-  <label for="id">ID*: </label><input id="id" [(ngModel)]="id">
-  <div style="clear: both;"></div>
-</div>
+<mat-form-field>
+  <mat-label for="id">ID*:
+    <input matInput placeholder="hi put text here" [(ngModel)]="id">
+  </mat-label>
+</mat-form-field>
 
-<div class ="check-input">
-  <label for="id">author*: </label><input id="author" [(ngModel)]="author">
-  <div style="clear: both;"></div>
-</div>
+<mat-form-field>
+  <mat-label for="author">author*:
+    <input matInput placeholder="hi put text here" [(ngModel)]="author">
+  </mat-label>
+</mat-form-field>
 
-<div class ="check-input">
-  <label for="id">body*: </label><input id="body" [(ngModel)]="body">
-  <div style="clear: both;"></div>
-</div>
+<mat-form-field>
+  <mat-label for="body">body*:
+    <input id="body" [(ngModel)]="body">
+  </mat-label>
+</mat-form-field>
 
-<div class ="check-input">
-  <label for="id">tags*: </label><input id="tags" [(ngModel)]="tags">
-  <div style="clear: both;"></div>
-</div>
+<mat-form-field>
+  <mat-label for="tags">tags*:
+    <input id="tags" [(ngModel)]="tags">
+  </mat-label>
+</mat-form-field>
 
-<div class ="check-button">
-  <button (click)="pushContentPromise()">Add
-    Content</button>
-</div>
+
+
+<button mat-raised-button color="primary" (click)="pushContentPromise()">Add
+  Content</button>
 
 <div class="error">
   <div [innerHTML]="message"></div>

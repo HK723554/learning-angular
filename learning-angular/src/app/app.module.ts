@@ -8,6 +8,10 @@ import { ContentListComponentComponent } from './content-list-component/content-
 import { TypeFilterPipe } from './type-filter.pipe';
 import { HoverStyleDirective } from './directives/hover-style.directive';
 import { CreateContentComponent } from './create-content/create-content.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { CreateContentComponent } from './create-content/create-content.componen
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
