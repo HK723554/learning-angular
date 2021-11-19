@@ -8,12 +8,10 @@ import { Content } from './helper-files/content-interface';
 })
 export class AppComponent implements OnInit {
   public title = 'learning-angular';
-  public check: any;
   _booksList: Content[] | any;
-  
+
 
   public constructor(){
-    this.check = 'Books';
   }
 
   ngOnInit(): void {
@@ -21,8 +19,7 @@ export class AppComponent implements OnInit {
   }
 
   public findBooks(): void {
-    console.log("Here is the list of books: ", this.check);
-    this.check = "Changed cause of the button";
+    console.log("Here is the list of books: ");
 
     this._booksList.push({
       id: 0,
@@ -34,5 +31,5 @@ export class AppComponent implements OnInit {
     this._booksList = [...this._booksList];
     console.log(this._booksList);
   }
-  
+
 }

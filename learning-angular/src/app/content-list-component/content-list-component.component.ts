@@ -7,56 +7,74 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content-list-component.component.scss']
 })
 export class ContentListComponentComponent implements OnInit {
+  message: string | any;
+  musicList = [{
+    id: 0,
+    author: 'Dragonforce',
+    imgUrl: 'https://upload.wikimedia.org/wikipedia/en/f/f6/Through_the_Fire_and_Flames_Cover_Art.jpg',
+    type: 'power metal',
+    title: 'Through The Fire And The Flames',
+    body: 'A legendary song with too many solos',
+    tags: ['gh3', 'double solos', 'epic']
+  }, {
+    id: 1,
+    author: 'Metallica',
+    type: 'metal',
+    title: 'Enter the Sandman',
+    body: 'This one was really hard on drums on rock band',
+  }, {
+    id: 2,
+    author: 'Ed Sheeran',
+    title: 'Perfect',
+    type: "Pop",
+    body: 'Actually really talented',
+    tags: ['relationship goals']
+  }, {
+    id: 3,
+    author: 'Quavo',
+    imgUrl: 'https://m.media-amazon.com/images/I/41XIjHKHNbL._AC_.jpg',
+    type: 'Hip-Hop',
+    title: 'Bubble Gum',
+    body: 'It brings tears to your eyes',
+  }, {
+    id: 4,
+    author: 'Jim Croce',
+    title: 'Time in a bottle',
+    body: 'The song from days of future past',
+    tags: ['quicksilver', 'wandasbrother']
+  }, {
+    id: 5,
+    author: 'Avenged Sevenfold',
+    type: 'metal',
+    title: 'Almost easy',
+    body: 'An oldie but a goodie',
+  }, {
+    id: 6,
+    author: 'Nightwish',
+    type: 'power metal',
+    title: 'Nemo',
+    body: 'This is not a power metal song, but that is ok',
+  }];
 
-  _booksList: Content[];
-  public check: any;
-  constructor() {
-
-    this._booksList = [{
-      id: 0,
-      title: "Thus spoke Zarathustra",
-      author: "Freidrich Nietzsche",
-      body: "a book about a man named zarathustra and his philosophically important adventures",
-      showOnList: true
-    },
-
-    {
-      id: 1,
-      title: "Kanun",
-      author: "Various",
-      body: "a book about the sociological code of the albanian people",
-      showOnList: true
-    },
-
-    {
-      id: 2,
-      title: "Eyewitness: Earth",
-      author: "DK",
-      body: "a book about the earth for kids",
-      showOnList: false
-    },
-
-    {
-      id: 3,
-      title: "yes",
-      author: "yes",
-      body: "a book ",
-      showOnList: false
-    },
-
-    {
-      id: 4,
-      title: "q",
-      author: "a",
-      body: "a book lol",
-      showOnList: true
-    }]
-    
-  }
   ngOnInit(): void {
   }
 
- 
+  findTitle(title: string): any{
+    let filter = this.musicList.filter(song => song.title === title);
+    if (filter.length > 0) {
+      this.message = "Song found";
+    }
+    else {
+      this.message = "No song found with that title";
+    }
+    console.log("spread operator", ...this.musicList);
+    console.log("Just the array", this.musicList);
+    this.musicList = [...this.musicList];
+    }
+
+  pushContent($event: any) {
+
+  }
 }
 
 

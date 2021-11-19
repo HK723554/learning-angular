@@ -10,13 +10,11 @@
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-:host.showOnList {
-  background-color: #008500;
-}
+
 
 .content-1 {
   margin: 5px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .content-title {
@@ -24,7 +22,7 @@
   padding: 40px 20px;
   font-weight: bold;
   font-size: 24px;
-  
+
 }
 
 .content-author {
@@ -40,6 +38,24 @@
 
 .content-type {
   padding: 20px 10px;
+}
+.content-img {
+  padding: 20px 10px;
+  width: 235px;
+  border-radius: 30px;
+}
+
+.content-tag{
+  background: #FBAB7E;
+  padding: 3px;
+  color: #360940FF;
+  border-radius: 20px;
+  margin: 10px 5px;
+}
+
+.tags{
+  margin: 5px 20px;
+
 }
 
 .line {

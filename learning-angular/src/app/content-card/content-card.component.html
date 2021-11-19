@@ -1,12 +1,37 @@
-<div class="content">
-    <div class="content-1">
-        <div class="line"></div>
-            <span class="content-title" *ngIf="item.showOnList === 'true'">{{item.title}}</span>
-            <span class="content-author">{{item.author}}</span>
-            <span class="content-type">{{item.type}}</span>
-        <div class="line"></div>
-            <span class="content-body">{{item.body}}</span>
-        <div class="line"></div>
-            <span class="content-tags" *ngFor="let tag of item.tags">{{tag}}</span>
-    </div>
+<div class="content-1">
+
+  <div class="content-title">
+    <strong>Song Title:</strong> {{song.title}}
+  </div>
+  <div class="line"></div>
+
+  <img class= "content-img" *ngIf="song.imgUrl"
+       (error)="song.imgUrl='https://st4.depositphotos.com/14953852/24787/v/600/depositphotos_247872612-stock-illustration-no-image-available-icon-vector.jpg'"
+       (click)="showId()" [src]="song.imgUrl">
+
+  <div class="content-author">
+    <strong>Artist:</strong> {{song.author}}
+  </div>
+
+  <div class="line"></div>
+
+   <div class="content-body">
+      {{song.body}}
+  </div>
+
+  <div class="line"></div>
+
+  <div class="content-type" *ngIf="song.type">
+    <strong>Genre:</strong> {{song.type}}
+  </div>
+
+  <div class="line"></div>
+  <mat-chip-list class="tags" *ngIf="song.tags">
+    <mat-label>Tags:</mat-label>
+
+     <mat-chip class="content-tag" *ngFor="let tag of song.tags; last as isLast">
+    {{ tag }}<span *ngIf="!isLast"></span>
+  </mat-chip>
+  </mat-chip-list>
+
 </div>

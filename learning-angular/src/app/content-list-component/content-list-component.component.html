@@ -1,5 +1,32 @@
-<app-content-card *ngFor="let item of _booksList; index as i;" 
-                  [item]="item"
-                  class="content-{{i}}">
-                
+<app-create-content></app-create-content>
+
+
+<mat-form-field fill="outline">
+  <mat-label>Check for the title</mat-label>
+  <input matInput placeholder="hi put text here" #checkTitle>
+
+</mat-form-field>
+
+<button mat-raised-button color="primary"
+        (click)="findTitle(checkTitle.value)">Does it exist?</button>
+
+<div class="title-check">
+  {{ message }}
+</div>
+
+<!-- <app-content-card *ngFor="let song of musicList; last as isLast" [class.is-last]="isLast" [song]="song"
+    [class.highlight-me]="checkTitle.value === song.title">
+</app-content-card> -->
+
+<app-content-card *ngFor="let song of musicList | typeFilter: 'metal'; last as isLast" [class.is-last]="isLast"
+                  [song]="song" [class.highlight-me]="checkTitle.value === song.title" class="metal">
 </app-content-card>
+
+<app-content-card *ngFor="let song of musicList | typeFilter: 'power metal'; last as isLast" [class.is-last]="isLast"
+                  [class.highlight-me]="checkTitle.value === song.title" [song]="song" class="power-metal">
+</app-content-card>
+
+<app-content-card *ngFor="let song of musicList | typeFilter: 'Pop'; last as isLast" [class.is-last]="isLast"
+                  [song]="song" class="pop" [class.highlight-me]="checkTitle.value === song.title">
+</app-content-card>
+

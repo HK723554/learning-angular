@@ -5,18 +5,33 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ContentCardComponent } from './content-card/content-card.component';
 import { ContentListComponentComponent } from './content-list-component/content-list-component.component';
-import { SortBookTitlePipe } from './sort-book-title.pipe';
+import { TypeFilterPipe } from './type-filter.pipe';
+import { HoverStyleDirective } from './directives/hover-style.directive';
+import { CreateContentComponent } from './create-content/create-content.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatChipsModule} from "@angular/material/chips";
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentCardComponent,
     ContentListComponentComponent,
-    SortBookTitlePipe
+    TypeFilterPipe,
+    HoverStyleDirective,
+    CreateContentComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
