@@ -13,6 +13,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
 import {MatChipsModule} from "@angular/material/chips";
+import { CreateContentDialogComponent } from './create-content-dialog/create-content-dialog.component';
+import {MAT_DIALOG_DATA, MatDialogConfig, MatDialogModule} from "@angular/material/dialog";
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import {MatChipsModule} from "@angular/material/chips";
     ContentListComponentComponent,
     TypeFilterPipe,
     HoverStyleDirective,
-    CreateContentComponent
+    CreateContentComponent,
+    CreateContentDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -31,9 +34,11 @@ import {MatChipsModule} from "@angular/material/chips";
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    MatChipsModule
+    MatChipsModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CreateContentDialogComponent]
 })
 export class AppModule { }
