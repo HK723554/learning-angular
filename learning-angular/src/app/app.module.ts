@@ -15,6 +15,9 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatChipsModule} from "@angular/material/chips";
 import { CreateContentDialogComponent } from './create-content-dialog/create-content-dialog.component';
 import {MAT_DIALOG_DATA, MatDialogConfig, MatDialogModule} from "@angular/material/dialog";
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -25,7 +28,9 @@ import {MAT_DIALOG_DATA, MatDialogConfig, MatDialogModule} from "@angular/materi
     TypeFilterPipe,
     HoverStyleDirective,
     CreateContentComponent,
-    CreateContentDialogComponent
+    CreateContentDialogComponent,
+    ContentDetailComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import {MAT_DIALOG_DATA, MatDialogConfig, MatDialogModule} from "@angular/materi
     MatButtonModule,
     MatInputModule,
     MatChipsModule,
-    MatDialogModule
+    MatDialogModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],
