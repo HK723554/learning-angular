@@ -1,6 +1,7 @@
 // @ts-ignore
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import {Content} from "../helper-files/content-interface";
+import {MatDialog} from "@angular/material/dialog";
 
 // @ts-ignore
 @Component({
@@ -20,7 +21,7 @@ export class CreateContentComponent implements OnInit {
   body: any;
   tags: any;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -53,4 +54,19 @@ export class CreateContentComponent implements OnInit {
   }
 
 
+
+  openCreateContentDialog() {
+
+    const dialogRef = this.dialog.open(CreateContentComponent, {
+      width: '250px',
+      data: {id: this.id,
+        author: this.author,body: this.body,
+        tags: this.tags.split(',')},
+    });
+
+    dialogRef.afterClosed().subscribe((result: any) => {
+      console.log('The dialog was closed');
+
+    });
+  }
 }

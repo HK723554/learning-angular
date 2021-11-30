@@ -29,9 +29,16 @@
   font-size: 20px;
 }
 
-.check-title-button:active{
+.check-title-button:active {
   background-color: white;
   color: #360940FF;
   padding: 7px 17px;
 
+  .mat-form-field {
+    padding: 10px;
+
+    button {
+      display: block;
+    }
+  }
 }

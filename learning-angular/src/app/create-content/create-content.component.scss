@@ -29,9 +29,18 @@
   font-size: 20px;
 }
 
-.check-button:active{
+.check-button:active {
   background-color: white;
   color: #360940FF;
   padding: 7px 17px;
 
+  .mat-form-field {
+    padding: 10px;
+    display: inline-block;
+    width: 300px;
+
+    button {
+      display: inline-block;
+    }
+  }
 }

@@ -12,6 +12,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
+import {MatChipsModule} from "@angular/material/chips";
+import { CreateContentDialogComponent } from './create-content-dialog/create-content-dialog.component';
+import {MAT_DIALOG_DATA, MatDialogConfig, MatDialogModule} from "@angular/material/dialog";
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import {RouterModule} from "@angular/router";
 
 
 @NgModule({
@@ -21,7 +27,12 @@ import {MatButtonModule} from "@angular/material/button";
     ContentListComponentComponent,
     TypeFilterPipe,
     HoverStyleDirective,
-    CreateContentComponent
+    CreateContentComponent,
+    CreateContentComponent,
+    CreateContentDialogComponent,
+    ContentDetailComponent,
+    NotFoundComponent
+
   ],
   imports: [
     BrowserModule,
@@ -29,9 +40,13 @@ import {MatButtonModule} from "@angular/material/button";
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatChipsModule,
     MatInputModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ],
+  entryComponents: [CreateContentDialogComponent]
 })
 export class AppModule { }

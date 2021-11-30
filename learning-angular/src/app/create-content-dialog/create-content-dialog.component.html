@@ -1,38 +1,3 @@
-<mat-form-field>
-  <mat-label for="id">ID*:
-    <input matInput placeholder="hi put text here" [(ngModel)]="id">
-  </mat-label>
-</mat-form-field>
-
-<mat-form-field>
-  <mat-label for="author">author*:
-    <input matInput placeholder="hi put text here" [(ngModel)]="author">
-  </mat-label>
-</mat-form-field>
-
-<mat-form-field>
-  <mat-label for="body">body*:
-    <input id="body" [(ngModel)]="body">
-  </mat-label>
-</mat-form-field>
-
-<mat-form-field>
-  <mat-label for="tags">tags*:
-    <input id="tags" [(ngModel)]="tags">
-  </mat-label>
-</mat-form-field>
-
-
-
-<button mat-raised-button color="primary" (click)="pushContentPromise()">Add
-  Content</button>
-
-<div class="error">
-  <div [innerHTML]="message"></div>
-</div>
-<button mat-raised-button color="primary" (click)="openCreateContentDialog()">Add
-  Content</button>
-
 <ol>
   <li>
     <mat-form-field appearance="outline">
