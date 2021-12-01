@@ -7,11 +7,19 @@ import {Content} from "../helper-files/content-interface";
   styleUrls: ['./create-content-dialog.component.scss']
 })
 export class CreateContentDialogComponent implements OnInit {
+  content: Content[] = [
+
+  ];
+
 
   constructor(){
   }
 
   ngOnInit() {
+
+  }
+
+  pushContentPromise(){
 
   }
 

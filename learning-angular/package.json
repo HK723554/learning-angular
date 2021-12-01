@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "http-server -p 8080 -c-1 dist/learning-angular",
+    "build": "http-server -p 8080 -c-1 dist/learning-angular",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "gc": "ng generate c",
     "gd": "ng generate d",
-    "gp": "ng generate p"
+    "gp": "ng generate p",
+    "create": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -23,7 +24,9 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@angular/service-worker": "~12.2.0",
     "angular-in-memory-web-api": "^0.10.0",
+    "http-server": "^14.0.0",
     "rxjs": "~6.6.0",
     "standard": "^16.0.4",
     "tslib": "^2.3.0",
