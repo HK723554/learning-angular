@@ -75,6 +75,11 @@ export class ContentListComponentComponent implements OnInit {
   pushContent($event: any) {
 
   }
+
+  refreshPage() {
+    // this should reload the page
+    location.reload();
+  }
 }
 
 
