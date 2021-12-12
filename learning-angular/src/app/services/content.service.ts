@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {Content} from "../helper-files/content-interface";
-import {CONTENT} from "../contentDB";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 
@@ -9,7 +8,7 @@ import {Observable} from "rxjs";
 })
 export class ContentService {
 
-  constructor(private messageService: MessageService, private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   private httpOptions = {
     headers: new HttpHeaders({'Content-type': 'application/json'})
