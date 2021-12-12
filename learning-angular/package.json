@@ -10,6 +10,7 @@
     "gc": "ng generate c",
     "gd": "ng generate d",
     "gp": "ng generate p",
+    "gs": "ng generate service",
     "create": "ng build --prod"
   },
   "private": true,
